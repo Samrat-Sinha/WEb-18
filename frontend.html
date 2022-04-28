@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="frontcss.css">
+</head>
+<body>
+    <h1>Masai Investers</h1>
+   <div id="masai">
+   </div>
+</body>
+</html>
+
+<script>
+
+  var sam = JSON.parse(localStorage.getItem("sdata"))
+  
+      sam.forEach(function(el){
+      var div1 = document.createElement("div")
+      var samphoto = document.createElement("img")
+      samphoto.setAttribute("src",el.sphoto)
+      var samname = document.createElement("h3")
+      samname.innerText = el.sname
+      var samrole = document.createElement
+      ("p")
+      samrole.innerText = el.srole
+      var  samlogo = document.createElement("img")
+      samlogo.setAttribute("src",el.slogo)
+
+      div1.append(samphoto,samname,samrole,samlogo)
+      document.querySelector("#masai").append(div1)
+      
+  })
+
+</script>

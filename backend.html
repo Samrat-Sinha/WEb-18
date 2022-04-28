@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input id="photo" type="text" placeholder="Enter imgURL">
+        
+        <input id="name" type="text" placeholder="Enter Name">
+    
+      
+        <input id="role" type="text" placeholder="Enter Role">
+      
+        <input id="logo" type="text" placeholder="Enter company Logo">
+       
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<script>
+     document.querySelector("#form").addEventListener("submit",myfunction)
+
+     function myfunction(){
+      event.preventDefault()
+      var sarray =JSON.parse(localStorage.getItem("sdata")) || []
+     var samrat = {
+         sphoto: document.querySelector("#photo").value,
+         sname: document.querySelector("#name").value,
+         srole: document.querySelector("#role").value,
+         slogo: document.querySelector("#logo").value
+        }
+        sarray.push(samrat)
+        console.log(sarray)
+        localStorage.setItem("sdata",JSON.stringify(sarray))
+     }
+</script>

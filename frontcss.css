@@ -1,0 +1,25 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#masai{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: auto auto;
+   gap: 20px;
+   width: 70%;
+   margin: auto;
+}
+#masai>div{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+p+img{
+    width: 40%;
+    margin-top: -20px;
+    padding-bottom: 10px;
+}
